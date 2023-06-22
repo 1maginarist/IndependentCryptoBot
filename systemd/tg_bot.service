@@ -1,0 +1,15 @@
+[Unit]
+Description=Cryptobot
+After=syslog.target
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/home/IndependentCryptoBot/IndependentCryptoBot
+ExecStart=/home/IndependentCryptoBot/IndependentCryptoBot/venv/bin/python3 /home/IndependentCryptoBot/IndependentCryptoBot/bot.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
